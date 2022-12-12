@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Image Generator</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">OpenAI Image Generator</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="https://beta.openai.com/docs" target="_blank">OpenAI API Docs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main  class="container-fluid">
+        <section class="section">
+          <form id="image-form" class="text-center">
+            <h1>Describe An Image</h1>
+            <!-- Alert Display -->
+            <div id="alertMessage"></div>
+            <!-- Main form started -->
+            <div class="form-group mb-2">
+              <input type="text" class="form-control" id="prompt" placeholder="Enter Text" />
+            </div>
+            <!-- size -->
+            <div class="form-group mb-2">
+              <select name="size" id="size" class="form-select">
+                <option value="small">Small</option>
+                <option value="medium" selected>Medium</option>
+                <option value="large">Large</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg">Generate</button>
+            </div>
+          </form>
+        </section>
+  
+        <section class="section">
+          <div class="container-fluid">
+            <h2 class="msg"></h2>
+            <img src="" alt="" id="image" />
+          </div>
+        </section>
+      </main>
+  
+      <div class="spinner"></div>
+      <script src="./js/main.js"></script>
+</body>
+</html>
